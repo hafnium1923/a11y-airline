@@ -56,7 +56,9 @@ const SpinButton: React.FC = () => {
         >
           +
         </button>
-        <p className="hidden">성인 승객 ${count}</p>
+        <p aria-atomic="true" aria-live="polite" className="hidden">
+          성인 승객 ${count}
+        </p>
       </div>
     </section>
   );
