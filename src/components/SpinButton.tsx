@@ -30,11 +30,15 @@ const SpinButton: React.FC = () => {
           >
             ?
             {isTooltipVisible && (
-              <span className="tooltip">최대 인원수는 3명까지 가능합니다</span>
+              <p className="tooltip">최대 인원수는 3명까지 가능합니다</p>
             )}
           </div>
         </div>
-        <button onClick={decrement} className="spinButton">
+        <button
+          onClick={decrement}
+          aria-label="성인 탑승자 한명 줄이기"
+          className="spinButton"
+        >
           -
         </button>
         <input
@@ -43,8 +47,13 @@ const SpinButton: React.FC = () => {
           readOnly
           className="spinButtonInput"
           value={count}
+          aria-label={`성인 탑승자 ${count} 명`}
         />
-        <button onClick={increment} className="spinButton">
+        <button
+          onClick={increment}
+          aria-label="성인 탑승자 한명 늘리기"
+          className="spinButton"
+        >
           +
         </button>
       </div>
